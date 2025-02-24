@@ -13,27 +13,19 @@ interface ProjectsData {
 
 const projectsData: ProjectsData[] = [
   {
-    title: "Project 1",
-    description: "Description 1",
-    link: "https://google.com",
-    code: "https://github.com",
-    previewVideo: "/video/preview.mp4",
+    title: "Karin Portfolio Design",
+    description: "O Karin Portfolio Design é um projeto inovador que visa criar um portfólio digital sofisticado e impactante para a designer Karin. Pensado para destacar a identidade única e criativa da profissional, o projeto alia estética moderna a uma experiência de usuário intuitiva e responsiva.",
+    link: "https://portfolio-design-sooty.vercel.app/",
+    code: "https://github.com/johnrodrigues008/portfolio-design",
+    previewVideo: "/video/portfolio-design.mp4",
     technologies: ["React", "TypeScript", "TailwindCSS"],
   },
   {
-    title: "Project 2",
-    description: "Description 2",
-    link: "https://github.com",
-    code: "https://github.com",
-    previewVideo: "/video/preview.mp4",
-    technologies: ["React", "TypeScript", "TailwindCSS"],
-  },
-  {
-    title: "Project 3",
-    description: "Description 3",
-    link: "https://github.com",
-    code: "https://github.com",
-    previewVideo: "/video/preview.mp4",
+    title: "Cardápio Online - Lourdes",
+    description: "O Cardápio Online - Lourdes é um projeto inovador que moderniza a experiência gastronômica, oferecendo um cardápio digital elegante, intuitivo e responsivo para o Restaurante Lourdes. Com um design que une tradição e modernidade, o projeto tem como objetivo facilitar o acesso às informações dos pratos, promovendo uma navegação fluida e interativa para os clientes.",
+    link: "https://cardapio-online-zeta-two.vercel.app/",
+    code: "https://github.com/johnrodrigues008/cardapio-online",
+    previewVideo: "/video/lourdes-cardapio.mp4",
     technologies: ["React", "TypeScript", "TailwindCSS"],
   },
 ];
