@@ -51,7 +51,7 @@ const skillsData: SkillsData[] = [
 
 export function Skills() {
     return (
-        <div className="flex flex-col gap-4 mt-4 pt-10">
+        <div className="flex flex-col gap-4 mt-10 p-5 md:p-0">
             <h1 className="text-2xl font-bold">Skills</h1>
             {skillsData.map((skillCategory, index) => (
                 <div key={index} className="flex flex-col gap-2">

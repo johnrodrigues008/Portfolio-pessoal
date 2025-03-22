@@ -42,7 +42,7 @@ const educationData: EducationItem[] = [
 
 export function Education() {
   return (
-    <div className="flex flex-col gap-4 pt-10">
+    <div className="flex flex-col gap-4 mt-10 p-5 md:p-0">
       <h1 className="text-2xl font-bold">Education</h1>
 
       <ol className="relative border-s border-gray-200 dark:border-gray-700">

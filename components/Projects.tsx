@@ -32,7 +32,7 @@ const projectsData: ProjectsData[] = [
 
 export function Projects() {
   return (
-    <div className="flex flex-col gap-4 mt-4 pt-10">
+    <div className="flex flex-col gap-4 mt-10 p-5 md:p-0">
       <h1 className="text-2xl font-bold">Projects</h1>
       <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-4">
         {projectsData?.map((item, index) => (
