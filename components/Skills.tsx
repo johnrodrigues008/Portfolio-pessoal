@@ -1,5 +1,3 @@
-"use client";
-
 interface SkillsData {
     category: string;
     skills: string[];
@@ -8,12 +6,12 @@ interface SkillsData {
 const skillsData: SkillsData[] = [
     {
         category: "Linguagens",
-        skills: ["HTML", "CSS","SCSS/SASS","JavaScript", "TypeScript", "PHP", "Python", "Java", "SQL"]
+        skills: ["HTML", "CSS", "SCSS/SASS", "JavaScript", "TypeScript", "PHP", "Python", "Java", "SQL"]
     },
     {
         category: "Frameworks e Bibliotecas",
         skills: [
-            "Angular", "AngularJS", "React.js","NextJS", "NestJS","Material ui","Tailwind CSS", "shadcn/ui", "Bootstrap", "Scrapy", "Jest", "Cypress", "GraphQL", "Laravel"
+            "Angular", "AngularJS", "React.js", "NextJS", "NestJS", "Material ui", "Tailwind CSS", "shadcn/ui", "Bootstrap", "Scrapy", "Jest", "Cypress", "GraphQL", "Laravel"
         ]
     },
     {
@@ -51,7 +49,7 @@ const skillsData: SkillsData[] = [
 
 export function Skills() {
     return (
-        <div className="flex flex-col gap-4 mt-10 p-5 md:p-0">
+        <section className="flex flex-col gap-4 mt-10 p-5 md:p-0">
             <h1 className="text-2xl font-bold">Skills</h1>
             {skillsData.map((skillCategory, index) => (
                 <div key={index} className="flex flex-col gap-2">
@@ -63,6 +61,6 @@ export function Skills() {
                     </div>
                 </div>
             ))}
-        </div>
+        </section>
     );
 };

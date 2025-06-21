@@ -1,6 +1,5 @@
-"use client";
 
-import { Button } from "./ui/button";
+import { useState } from "react";
 
 interface ProjectsData {
   title: string;
@@ -14,7 +13,8 @@ interface ProjectsData {
 const projectsData: ProjectsData[] = [
   {
     title: "Karin Portfolio Design",
-    description: "O Karin Portfolio Design é um projeto inovador que visa criar um portfólio digital sofisticado e impactante para a designer Karin. Pensado para destacar a identidade única e criativa da profissional, o projeto alia estética moderna a uma experiência de usuário intuitiva e responsiva.",
+    description:
+      "O Karin Portfolio Design é um projeto inovador que visa criar um portfólio digital sofisticado e impactante para a designer Karin.",
     link: "https://portfolio-design-sooty.vercel.app/",
     code: "https://github.com/johnrodrigues008/portfolio-design",
     previewVideo: "/video/portfolio-design.mp4",
@@ -22,55 +22,95 @@ const projectsData: ProjectsData[] = [
   },
   {
     title: "Cardápio Online - Lourdes",
-    description: "O Cardápio Online - Lourdes é um projeto inovador que moderniza a experiência gastronômica, oferecendo um cardápio digital elegante, intuitivo e responsivo para o Restaurante Lourdes. Com um design que une tradição e modernidade, o projeto tem como objetivo facilitar o acesso às informações dos pratos, promovendo uma navegação fluida e interativa para os clientes.",
+    description:
+      "O Cardápio Online - Lourdes é um projeto moderno para restaurantes, com foco em navegação fluida e responsiva.",
     link: "https://cardapio-online-zeta-two.vercel.app/",
     code: "https://github.com/johnrodrigues008/cardapio-online",
     previewVideo: "/video/lourdes-cardapio.mp4",
     technologies: ["React", "TypeScript", "TailwindCSS"],
   },
+  {
+    title: "Projeto 3",
+    description: "Outro projeto exemplo para portfólio.",
+    link: "#",
+    code: "#",
+    previewVideo: "/video/portfolio-design.mp4",
+    technologies: ["React", "TailwindCSS"],
+  },
+  {
+    title: "Projeto 4",
+    description: "Outro projeto exemplo para portfólio.",
+    link: "#",
+    code: "#",
+    previewVideo: "/video/portfolio-design.mp4",
+    technologies: ["React", "TailwindCSS"],
+  },
+  {
+    title: "Projeto 5",
+    description: "Outro projeto exemplo para portfólio.",
+    link: "#",
+    code: "#",
+    previewVideo: "/video/portfolio-design.mp4",
+    technologies: ["React", "TailwindCSS"],
+  },
+  {
+    title: "Projeto 6",
+    description: "Outro projeto exemplo para portfólio.",
+    link: "#",
+    code: "#",
+    previewVideo: "/video/portfolio-design.mp4",
+    technologies: ["React", "TailwindCSS"],
+  },
 ];
 
 export function Projects() {
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleProjects = showAll ? projectsData : projectsData.slice(0, 3);
+
   return (
-    <div className="flex flex-col gap-4 mt-10 p-5 md:p-0">
-      <h1 className="text-2xl font-bold">Projects</h1>
-      <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-4">
-        {projectsData?.map((item, index) => (
-          <div
-            key={index}
-            className="flex flex-col border border-gray-100 dark:border-gray-800 rounded-md"
-          >
-            <video
-              src={item.previewVideo}
-              autoPlay
-              muted
-              className="w-full h-full"
-            />
-            <div className="flex flex-col gap-3 p-4">
-              <h2 className="text-lg font-bold">{item.title}</h2>
-              <p className="text-sm text-gray-500">{item.description}</p>
-              <div className="flex gap-1 flex-wrap">
-                {item.technologies.map((tech, index) => (
-                  <div
-                    key={index}
-                    className="flex border border-gray-200 rounded-md px-2 py-1 text-sm bg-gray-500 text-white"
-                  >
-                    {tech}
-                  </div>
-                ))}
-              </div>
-              <div className="flex gap-2 mt-2">
-                <a href={item.link}>
-                  <Button variant="default">View</Button>
-                </a>
-                <a href={item.code}>
-                  <Button variant="outline">Code</Button>
-                </a>
-              </div>
+    <section className="w-full py-10">
+      <div className="mx-auto px-4 md:p-0">
+        <h1 className="font-bold mb-10 uppercase text-2xl md:text-3xl text-center md:text-start">Meu trabalho</h1>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {visibleProjects.map((item, index) => (
+            <div key={index} className="flex flex-col items-start">
+              <h2 className="text-sm font-bold uppercase mb-2">
+                {item.title}
+              </h2>
+
+              <video
+                src={item.previewVideo}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-[300px] object-cover"
+              />
+
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-green-500 text-white text-sm w-full text-center py-2 mt-4 hover:text-black hover:bg-green-100 transition"
+              >
+                Acesse o recurso original →
+              </a>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+
+        {/* Botão Ver mais / Ver menos */}
+        <div className="flex justify-center mt-10">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="text-sm text-white border border-green-500 px-6 py-2 hover:text-black hover:bg-green-100 transition"
+          >
+            {showAll ? "Ver menos projetos" : "Ver mais projetos"}
+          </button>
+        </div>
       </div>
-    </div>
+    </section>
   );
-};
+}

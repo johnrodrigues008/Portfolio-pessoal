@@ -1,10 +1,10 @@
-"use client";
+
 
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { TextAnimate } from "./magicui/text-animate";
 import { WordRotate } from "./magicui/word-rotate";
-import { NumberTicker } from "./magicui/number-ticker";
+// import { NumberTicker } from "./magicui/number-ticker";
 
 export function Into() {
   return (
@@ -34,9 +34,10 @@ export function Into() {
               className=" text-white"
               words={[
                 "John Rodrigues",
-                "Programador",
+                "Analista",
                 "Desenvolvedor",
-                "Designer",
+                "Programador",
+                "Web designer",
               ]}
             />
           </h1>
@@ -48,7 +49,7 @@ export function Into() {
             <span className="text-blue-700">Cortella</span>.
           </p>
         </div>
-        <div className="flex">
+        {/* <div className="flex">
           <div className="text-center w-full flex flex-col md:w-auto md:mr-5 text-white">
             <div>
               <span className="text-xl">+</span>
@@ -79,7 +80,7 @@ export function Into() {
             </div>
             <span className="text-1xl">Sistemas</span>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <motion.div

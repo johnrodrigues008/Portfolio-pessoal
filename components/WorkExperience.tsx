@@ -54,7 +54,7 @@ const workExperienceData: WorkExperienceItem[] = [
 
 export function WorkExperience() {
   return (
-    <div className="flex flex-col gap-4 pt-4 p-5 md:p-0">
+    <section className="flex flex-col gap-4 pt-4 p-5 md:p-0">
       <h1 className="text-2xl font-bold">Work Experience</h1>
 
       <ol className="relative border-s border-gray-200 dark:border-gray-700">
@@ -78,6 +78,6 @@ export function WorkExperience() {
           </li>
         ))}
       </ol>
-    </div>
+    </section>
   );
 };

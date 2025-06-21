@@ -1,5 +1,3 @@
-"use client";
-
 import { CalendarIcon, HomeIcon, MailIcon, Moon, PencilIcon, Sun } from "lucide-react";
 import Link from "next/link";
 
@@ -83,7 +81,7 @@ const DATA = {
         name: "WhatsApp",
         url: "https://wa.me/5561991803216",
         icon: Icons.whatsapp,
-      },      
+      },
       email: {
         name: "john.rodrigues008@gmail.com",
         url: "mailto:john.rodrigues008@gmail.com",
@@ -99,7 +97,7 @@ export function CustomDock() {
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 768);
-    
+
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
@@ -109,18 +107,18 @@ export function CustomDock() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []); 
+  }, []);
 
   return (
     <div className={
-      isMobile 
-        ? "fixed left-1/2 right-1/2 bottom-5 flex items-center justify-center" 
+      isMobile
+        ? "fixed left-1/2 right-1/2 bottom-5 flex items-center justify-center"
         : "fixed left-20 top-1/2 bottom-1/2 flex items-center justify-center"
     }>
       <div className="flex flex-col items-center justify-center">
         <TooltipProvider>
-          <Dock 
-            direction="middle" 
+          <Dock
+            direction="middle"
             orientation={isMobile ? "horizontal" : "vertical"}
           >
             {DATA.navbar.map((item) => (
@@ -170,7 +168,7 @@ export function CustomDock() {
             <DockIcon>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <div className="size-12 rounded-full flex items-center justify-center"> 
+                  <div className="size-12 rounded-full flex items-center justify-center">
                     {resolvedTheme === "light" ? (
                       <Sun className='w-5 h-5' onClick={() => setTheme("dark")} />
                     ) : (
